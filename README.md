@@ -52,3 +52,15 @@
   ```
   Gomoku.exe
   ```
+
+## lab1 内容
+
+- 学习并熟悉 Qt 框架
+- 利用栈实现悔棋功能
+
+### 修改范围
+
+- `OperationWidget.cpp`: TODO 所在行
+- `MainWindow.cpp`: TODO 所在行
+- `Board.h`: 全部
+- `Board.cpp`: 全部（不仅限于 TODO 部分）
