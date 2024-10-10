@@ -25,7 +25,7 @@
 4. 运行qmake生成Makefile:
 
    ```
-   qmake ../Gomoku.pro
+   qmake ../lab1.pro
    ```
 
 5. 编译项目:
@@ -34,23 +34,25 @@
    make
    ```
 
+6. 如出现编译问题且长时间未解决，可尝试将build文件夹删除后重新执行上述步骤。
+
 ### 运行游戏
 
 编译完成后,在build目录下会生成可执行文件。运行方式如下:
 
 - 在macOS上:
   ```
-  open Gomoku.app
+  open lab1.app
   ```
 
 - 在Linux或其他Unix系统上:
   ```
-  ./Gomoku
+  ./lab1
   ```
 
 - 在Windows上:
   ```
-  Gomoku.exe
+  lab1.exe
   ```
 
 ## lab1 内容

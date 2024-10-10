@@ -13,9 +13,9 @@ void BoardWidget::paintEvent(QPaintEvent *event) {
     painter.setRenderHint(QPainter::Antialiasing);
 
     // 绘制棋盘格子
-    for (int i = 0; i < game_->getBoard()->getRows(); ++i) {
-        for (int j = 0; j < game_->getBoard()->getCols(); ++j) {
-            QRect rect(j * cellSize_, i * cellSize_, cellSize_, cellSize_);
+    for (int i = 0; i < game_->getBoard()->getRows() - 1; ++i) {
+        for (int j = 0; j < game_->getBoard()->getCols() - 1; ++j) {
+            QRect rect(j * cellSize_ + cellSize_ / 2, i * cellSize_ + cellSize_ / 2, cellSize_, cellSize_);
             painter.drawRect(rect);
         }
     }

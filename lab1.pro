@@ -1,6 +1,6 @@
 QT       += core gui widgets
 
-TARGET = Gomoku
+TARGET = lab1
 TEMPLATE = app
 
 CONFIG += c++17

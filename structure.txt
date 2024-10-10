@@ -1,4 +1,4 @@
-Gomoku/
+lab1/
 ├── src/
 │   ├── core/
 │   │   ├── Game.h
@@ -22,5 +22,5 @@ Gomoku/
 │   │
 │   └── main.cpp
 |
-├── Gomoku.pro
+├── lab1.pro
 └── README.md
