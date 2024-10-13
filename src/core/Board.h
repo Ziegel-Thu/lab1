@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <stack>
+#include <memory>
 #include "Piece.h"
 
 class Board {
