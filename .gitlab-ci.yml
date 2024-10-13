@@ -1,3 +1,6 @@
+before_script:
+  - apt update -q && apt install -y -q libgl1-mesa-dev
+
 build-job:
   stage: build
   script:
