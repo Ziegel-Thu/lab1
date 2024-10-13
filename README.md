@@ -9,6 +9,31 @@
 - Qt 6.0或更高版本
 - C++17兼容的编译器
 
+### Qt入门
+
+可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt与集成开发环境。
+
+如果安装过程中出现网络错误，可以尝试重新下载或更换上网方式。
+
+除了官方下载器，linux & MacOS的自带包管理器也可以安装qt开发环境，该方法需要有一定的命令行基础。
+
+#### Qt的对象生命周期
+
+Qt中的对象生命周期由`QObject`的`parent`属性决定。当一个对象的`parent`被设置为另一个对象时，当父对象被析构时，它的子对象也会被析构。
+这种情况下，我们称父对象拥有子对象的所有权（take ownership）。
+而大部分Qt对象都是`QObject`的子类，也就是说，所有对象构成了一颗树，我们`delete`其中一个对象时，整颗子树也会被`delete`。
+
+在本项目中，`addWidget`、`addItem`等方法都会掌管对象。具体哪些操作会获得所有权，以及哪些操作会释放所有权、哪些操作会删除对象，需要查阅具体函数的文档。
+一般来说，在父对象被删除之前手动删除子对象是最安全的选择。
+
+#### Qt参考文档
+
+* [Qt官方文档](https://doc.qt.io/qt-6/index.html)
+* [Qt组件大全](https://doc.qt.io/qt-6/gallery.html)
+* [Qt的对象树](https://doc.qt.io/qt-6/objecttrees.html)
+
+
+
 ### 编译步骤
 
 1. 克隆或下载此项目到本地。
