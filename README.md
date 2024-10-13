@@ -66,3 +66,7 @@
 - `MainWindow.cpp`: TODO 所在行
 - `Board.h`: 全部
 - `Board.cpp`: 全部（不仅限于 TODO 部分）
+
+### 关于CI
+
+CI(continuous integration)会在每一次push之后自动检查是否编译通过，结果可以在GitLab左侧的CI/CD中找到。
