@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <QLabel>
 #include <QWidget>
 #include "../core/Game.h"

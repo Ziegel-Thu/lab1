@@ -1,8 +1,8 @@
 #pragma once
 
-#include <vector>
-#include <stack>
 #include <memory>
+#include <stack>
+#include <vector>
 #include "Piece.h"
 
 class Board {

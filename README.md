@@ -7,11 +7,11 @@
 ### 前提条件
 
 - Qt 6.0或更高版本
-- C++17兼容的编译器
+- C++11兼容的编译器
 
 ### Qt入门
 
-可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt与集成开发环境。
+可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
 
 如果安装过程中出现网络错误，可以尝试重新下载或更换上网方式。
 
@@ -34,51 +34,45 @@ Qt中的对象生命周期由`QObject`的`parent`属性决定。当一个对象�
 
 
 
-### 编译步骤
+### 编译运行
 
-1. 克隆或下载此项目到本地。
+1. 参考[视频教程](https://meeting.tencent.com/crm/NLeoZGrl6f)，完成cursor/vscode的安装，以及推荐扩展的安装，并生成本机的公钥后添加到清华git上，使用cursor/vscode将代码仓库克隆到本地。
+   - 推荐扩展：
+     - ms-vscode.cpptools-extension-pack
+     - theqtcompany.qt-cpp-pack
+     - Gruntfuggly.todo-tree
+     - eamodio.gitlens
+   - Clone with ssh: `git@git.tsinghua.edu.cn:adv-prog/2024/lab1.git`
 
 2. 打开终端,进入项目根目录。
 
-3. 创建一个build文件夹并进入:
-
-   ```
-   mkdir build
-   cd build
-   ```
+3. 创建一个build文件夹并进入：
+   1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
+   2. 输入 `tasks: run task` 并运行此命令；
+   3. 选择 `mkdir` 任务并运行。
 
 4. 运行qmake生成Makefile:
-
-   ```
-   qmake ../lab1.pro
-   ```
+   1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
+   2. 输入 `tasks: run task` 并运行此命令；
+   3. 选择 `qmake-release` 任务并运行。
 
 5. 编译项目:
+   1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
+   2. 输入 `tasks: run task` 并运行此命令；
+   3. 选择 `make-release` 任务并运行。
 
-   ```
-   make
-   ```
+6. 运行项目:
+   1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
+   2. 输入 `tasks: run task` 并运行此命令；
+   3. 选择 `run-release` 任务并运行。
 
-6. 如出现编译问题且长时间未解决，可尝试将build文件夹删除后重新执行上述步骤。
+#### 注意事项
 
-### 运行游戏
-
-编译完成后,在build目录下会生成可执行文件。运行方式如下:
-
-- 在macOS上:
-  ```
-  open lab1.app
-  ```
-
-- 在Linux或其他Unix系统上:
-  ```
-  ./lab1
-  ```
-
-- 在Windows上:
-  ```
-  lab1.exe
-  ```
+- 步骤3只需要运行一次，也就是只需要创建一次build文件夹。
+- 步骤4-6可以直接通过运行步骤6来实现，也就是直接运行 `run-release` 任务。
+  - 因为配置了 `run-release` 依赖于 `make-release` ， `make-release` 依赖于 `qmake-release` 
+  - 所以 `run-release` 会自动执行 `qmake-release` 和 `make-release` 任务
+- 如出现编译运行的问题且长时间未解决，可尝试将build文件夹删除后重新执行上述步骤3-6。
 
 ## lab1 内容
 
