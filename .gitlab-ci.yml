@@ -1,10 +1,25 @@
-before_script:
-  - sudo apt update -q && sudo apt install -y -q libgl1-mesa-dev
+stages:
+  - build
+  - upload_artifacts
 
-build-job:
+build-linux:
   stage: build
+  image: stateoftheartio/qt6:6.7-gcc-aqt
   script:
+    - sudo apt update -q && sudo apt install -y -q libgl1-mesa-dev
     - mkdir build
     - cd build
     - qmake ..
     - make
+
+build-mingw32:
+  stage: build
+  image: stateoftheartio/qt6:6.7-mingw-aqt
+  script:
+    - mkdir build && cd build
+    - wine $HOME/.wine/drive_c/Qt/6.7.0/mingw_64/bin/qmake.exe ../
+    - wine $HOME/.wine/drive_c/Qt/Tools/mingw1120_64/bin/mingw32-make.exe
+    - wine $HOME/.wine/drive_c/Qt/6.7.0/mingw_64/bin/windeployqt.exe release/
+  artifacts:
+    paths:
+      - build/release/
