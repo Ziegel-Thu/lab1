@@ -21,10 +21,10 @@
             "options": {
                 "cwd": "${workspaceFolder}/build" //进入build目录
             },
-            "command": "qmake", //qmake命令，这里没用完整路径，是因为配置到环境变量了
+            "command": "qmake", //把QT加到了环境变量PATH里，所以这里直接执行qmake
             "args": [
                 "../${workspaceFolderBasename}.pro", //在build目录上一级
-                "\"CONFIG+=qtquickcompiler\""
+                "\"CONFIG+=qtquickcompiler\"" //编译优化
             ],
             "dependsOn": [ //这是本条命令依赖的前置条件，就是上面创建build文件夹的task，直接执行本task会自动先调用依赖的task
                 // "mkdir" //手动执行一次 mkdir ，后面不用每次都执行创建目录的操作
@@ -52,10 +52,10 @@
             "options": {
                 "cwd": "${workspaceFolder}/build" //没在.pro配置DESTDIR,会生成到build目录下面对应目录
             },
-            //执行的app名字，一般是当前项目文件夹的名称，自定义可以写其他的
-            "command": "${workspaceFolderBasename}.app/Contents/MacOS/${workspaceFolderBasename}", // for macos
-            // TODO "command": "", // for windows
-            // TODO "command": "", // for linux
+            // 执行的app路径，app名称一般是当前项目文件夹的名称
+            // "command": "${workspaceFolderBasename}.app/Contents/MacOS/${workspaceFolderBasename}", // for macos
+            "command": "${workspaceFolder}/build/release/${workspaceFolderBasename}.exe", // for windows
+            // "command": "", // for linux // TODO 请参考上述两个平台的写法，自行查看可执行文件的路径，并进行修改
             "dependsOn": [
                 "make-release"
             ]

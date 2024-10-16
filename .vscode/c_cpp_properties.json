@@ -1,47 +1,48 @@
 {
     "configurations": [
+        // for macos
         {
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/Cellar/qt/6.7.2/include/**" // TODO for all
+                "/opt/homebrew/Cellar/qt/6.7.2/include/**" // TODO correct path
             ],
             "defines": [],
             "macFrameworkPath": [ // TODO necessary?
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/clang", // TODO for all
+            "compilerPath": "/usr/bin/clang", // TODO correct path
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "macos-clang-arm64", // TODO for all
+            "intelliSenseMode": "macos-clang-arm64", // TODO correct compiler and architecture
             "configurationProvider": "ms-vscode.cmake-tools"
         },
-        // TODO for windows
+        // for windows
         {
-            "name": "Win32", // TODO Windows?
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Qt/6.7.2/msvc2019_64/include/**" // TODO for all
+                "C:/Qt/6.8.0/llvm-mingw_64/include/**" // TODO correct path
             ],
             "defines": [],
-            "compilerPath": "C:/Qt/Tools/mingw1120_64/bin/gcc.exe", // TODO for all
+            "compilerPath": "C:/Qt/Tools/llvm-mingw1706_64/bin/clang.exe", // TODO correct path
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "windows-msvc-x64", // TODO for all
+            "intelliSenseMode": "windows-clang-x64", // TODO correct compiler and architecture
             "configurationProvider": "ms-vscode.cmake-tools"
         },
-        // TODO for linux
+        // for linux
         {
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/**" // TODO for all
+                "/usr/include/**" // TODO correct path
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc", // TODO for all
+            "compilerPath": "/usr/bin/gcc", // TODO correct path
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "linux-gcc-x64", // TODO for all
+            "intelliSenseMode": "linux-gcc-x64", // TODO correct compiler and architecture
             "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
