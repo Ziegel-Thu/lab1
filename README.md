@@ -36,7 +36,13 @@ Qt中的对象生命周期由`QObject`的`parent`属性决定。当一个对象�
 
 ### 编译运行
 
-1. 克隆或下载此项目到本地。
+1. 参考[视频教程](https://meeting.tencent.com/crm/NLeoZGrl6f)，完成cursor/vscode的安装，以及推荐扩展的安装，并生成本机的公钥后添加到清华git上，使用cursor/vscode将代码仓库克隆到本地。
+   - 推荐扩展：
+     - ms-vscode.cpptools-extension-pack
+     - theqtcompany.qt-cpp-pack
+     - Gruntfuggly.todo-tree
+     - eamodio.gitlens
+   - Clone with ssh: `git@git.tsinghua.edu.cn:adv-prog/2024/lab1.git`
 
 2. 打开终端,进入项目根目录。
 
