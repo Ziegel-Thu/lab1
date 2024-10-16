@@ -11,7 +11,7 @@
 
 ### Qt入门
 
-可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt与集成开发环境。
+可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
 
 如果安装过程中出现网络错误，可以尝试重新下载或更换上网方式。
 
