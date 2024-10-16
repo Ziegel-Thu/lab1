@@ -94,4 +94,8 @@ Qt中的对象生命周期由`QObject`的`parent`属性决定。当一个对象�
 
 ### 关于CI
 
-CI(continuous integration)会在每一次push之后自动检查是否编译通过，结果可以在GitLab左侧的CI/CD中找到。
+持续集成（Continuous Integration）系统会在每次代码推送后自动执行，检查代码是否能够成功编译。
+
+您可以在GitLab界面左侧的“构建”部分查看编译结果。
+
+CI系统还会生成一个压缩包，包含编译后的Windows可执行程序。这个压缩包可以在页面左侧的菜单栏中，通过“构建”-“产物”选项被浏览。
