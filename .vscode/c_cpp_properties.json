@@ -8,9 +8,9 @@
                 "/opt/homebrew/Cellar/qt/6.7.2/include/**" // TODO correct path
             ],
             "defines": [],
-            "macFrameworkPath": [ // TODO necessary?
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
-            ],
+            // "macFrameworkPath": [ // unnecessary
+            //     "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            // ],
             "compilerPath": "/usr/bin/clang", // TODO correct path
             "cStandard": "c11",
             "cppStandard": "c++11",
