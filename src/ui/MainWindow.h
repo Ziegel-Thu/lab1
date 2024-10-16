@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QMainWindow>
 #include <memory>
+#include <QMainWindow>
 #include "../core/Game.h"
 
 class BoardWidget;
