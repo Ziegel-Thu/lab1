@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/qt/6.7.2/include/**" // TODO for all
+            ],
+            "defines": [],
+            "macFrameworkPath": [ // TODO necessary?
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang", // TODO for all
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "macos-clang-arm64", // TODO for all
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        // TODO for windows
+        {
+            "name": "Win32", // TODO Windows?
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Qt/6.7.2/msvc2019_64/include/**" // TODO for all
+            ],
+            "defines": [],
+            "compilerPath": "C:/Qt/Tools/mingw1120_64/bin/gcc.exe", // TODO for all
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "windows-msvc-x64", // TODO for all
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        // TODO for linux
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/**" // TODO for all
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc", // TODO for all
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-x64", // TODO for all
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

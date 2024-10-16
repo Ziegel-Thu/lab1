@@ -3,7 +3,7 @@ QT       += core gui widgets
 TARGET = lab1
 TEMPLATE = app
 
-CONFIG += c++17
+CONFIG += c++11
 
 SOURCES += \
     src/main.cpp \
