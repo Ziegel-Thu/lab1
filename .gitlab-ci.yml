@@ -1,0 +1,10 @@
+before_script:
+  - sudo apt update -q && sudo apt install -y -q libgl1-mesa-dev
+
+build-job:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - qmake ..
+    - make
