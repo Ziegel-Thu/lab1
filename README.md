@@ -44,8 +44,8 @@ Git的教程比较多，我们在这里推荐几个：
     * [Git教程 - 廖雪峰](https://www.liaoxuefeng.com/wiki/896043488029600)：网页，较详细
     * [Git 原理入门（阮一峰）](http://www.ruanyifeng.com/blog/2018/10/git-internals.html)：网页，简要入门教程
 - 上传到[清华`git`](https://git.tsinghua.edu.cn/)时登录验证失败怎么办？
-    * 参考上述视频，在[账户设置](https://git.tsinghua.edu.cn/-/profile/personal_access_tokens)中添加一个Personal Access Token；
-    * 或者在[账户设置](https://git.tsinghua.edu.cn/-/profile/keys)中添加一个SSH公钥（推荐）
+    * 参考教程，在[账户设置](https://git.tsinghua.edu.cn/-/user_settings/personal_access_tokens)中添加一个Personal Access Token；
+    * 或者在[账户设置](https://git.tsinghua.edu.cn/-/user_settings/keys)中添加一个SSH公钥（推荐）
 - 如何更改本网站语言：右上角头像-Preferences-底部Localization-Language-选择“Chinese”，然后点击页面底部的“Save changes”，可以切换到中文版。
 
 初始仓库里除了main分支，还有一个被保护的down分支。如果之后实验的基础代码有更新，我们会把新的版本push到down分支上。
