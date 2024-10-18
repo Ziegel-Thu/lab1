@@ -32,7 +32,109 @@ Qt中的对象生命周期由`QObject`的`parent`属性决定。当一个对象�
 * [Qt组件大全](https://doc.qt.io/qt-6/gallery.html)
 * [Qt的对象树](https://doc.qt.io/qt-6/objecttrees.html)
 
+### Git使用教程
 
+Git的教程比较多，我们在这里推荐几个：
+
+- [cpp.studio](https://cpp.studio/toolchain/git/)
+- 其他教程：
+    * [Git工作流和核心原理](https://www.bilibili.com/video/BV1r3411F7kn)：Bilibili视频，约20分钟
+    * [Git教程 - 廖雪峰](https://www.liaoxuefeng.com/wiki/896043488029600)：网页，较详细
+    * [Git 原理入门（阮一峰）](http://www.ruanyifeng.com/blog/2018/10/git-internals.html)：网页，简要入门教程
+- 上传到[清华`git`](https://git.tsinghua.edu.cn/)时登录验证失败怎么办？
+    * 参考上述视频，在[账户设置](https://git.tsinghua.edu.cn/-/profile/personal_access_tokens)中添加一个Personal Access Token；
+    * 或者在[账户设置](https://git.tsinghua.edu.cn/-/profile/keys)中添加一个SSH公钥（推荐）
+- 如何更改本网站语言：右上角头像-Preferences-底部Localization-Language-选择“Chinese”，然后点击页面底部的“Save changes”，可以切换到中文版。
+
+初始仓库里除了main分支，还有一个被保护的down分支。如果之后实验的基础代码有更新，我们会把新的版本push到down分支上。
+
+<details>
+<summary>
+本项目可能会用到的`git`操作速查表
+</summary>
+
+#### 基础操作
+
+以下所有命令中`<word>`需要替换为你自己的内容。
+
+设置用户名和邮箱：
+```bash
+git config --global user.email "<your email>"
+git config --global user.name "<your name>"
+# 例：
+git config --global user.email "email@example.com"
+git config --global user.name "San Zhang"
+```
+
+将代码从网上下载至本地：
+```bash
+git clone <repo-url>
+# 例：
+git clone https://git.tsinghua.edu.cn/adv-prog/2022/leveldb-sk/
+```
+
+进入仓库目录，查看当前仓库状态：
+```bash
+git status
+```
+
+添加文件到暂存区：
+```bash
+git add <files>
+# 例：添加当前目录下的所有文件。“.”表示当前目录。
+git add .
+```
+
+提交暂存区的文件至版本库：
+```bash
+git commit -m "<your message>"
+# 例：
+git commit -m "Create a new file"
+```
+
+#### 同步操作
+
+添加一个远程地址：
+```bash
+git remote add <remote_name> <remote_url>
+# 例：
+git remote add upstream https://git.tsinghua.edu.cn/adv-prog/2022/leveldb-sk/
+```
+
+推送版本库的文件至远程仓库（如清华`git`）：
+```bash
+git push <remote> <branch>
+# 例：
+git push origin main
+```
+
+从远程库中下载更新：
+```bash
+git fetch origin main
+git merge origin/main # 合并origin远程的main分支到本地的当前分支
+# 或将两步合为一步：
+git pull
+```
+
+#### 分支操作
+
+创建一个新分支：
+```bash
+git branch <branch_name>
+# 例：
+git branch patch_1
+```
+
+切换到某分支：
+```bash
+git checkout <branch_name>
+# 例：
+git checkout patch_1
+# 切换回来main分支：
+git checkout main
+```
+
+</details>
 
 ### 编译运行
 
