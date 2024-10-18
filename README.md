@@ -6,16 +6,18 @@
 
 ### 前提条件
 
+- Git
 - Qt 6.0或更高版本
 - C++11兼容的编译器
+- IDE: Cursor / VSCode （课堂上我们会以 Cursor 来演示，其他的 IDE 也可以，包括但不限于 VS 等）
 
 ### Qt入门
 
-可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
+在 Windows 中，可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
 
 如果安装过程中出现网络错误，可以尝试重新下载或更换上网方式。
 
-除了官方下载器，linux & MacOS的自带包管理器也可以安装qt开发环境，该方法需要有一定的命令行基础。
+在 Linux/MacOS 中，除了官方下载器，也可以使用包管理器安装qt开发环境，该方法需要有一定的命令行基础。
 
 #### Qt的对象生命周期
 
@@ -138,32 +140,32 @@ git checkout main
 
 ### 编译运行
 
-1. 完成cursor/vscode的安装，以及推荐扩展的安装，并生成本机的公钥后添加到清华git上，使用cursor/vscode将代码仓库克隆到本地。
+1. 安装 Cursor / VSCode，安装推荐扩展，使用 IDE 将代码仓库克隆到本地，并打开项目。
    - 推荐扩展：
+     - MS-CEINTL.vscode-language-pack-zh-hans
      - ms-vscode.cpptools-extension-pack
      - theqtcompany.qt-cpp-pack
      - Gruntfuggly.todo-tree
      - eamodio.gitlens
    - Clone with ssh: `git@git.tsinghua.edu.cn:adv-prog/2024/lab1.git`
+   - Clone with https: `https://git.tsinghua.edu.cn/adv-prog/2024/lab1.git`
 
-2. 打开终端,进入项目根目录。
-
-3. 创建一个build文件夹并进入：
+2. 在项目根目录下创建一个build文件夹：
    1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
    2. 输入 `tasks: run task` 并运行此命令；
    3. 选择 `mkdir` 任务并运行。
 
-4. 运行qmake生成Makefile:
+3. 运行qmake生成Makefile:
    1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
    2. 输入 `tasks: run task` 并运行此命令；
    3. 选择 `qmake-release` 任务并运行。
 
-5. 编译项目:
+4. 使用Makefile编译项目:
    1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
    2. 输入 `tasks: run task` 并运行此命令；
    3. 选择 `make-release` 任务并运行。
 
-6. 运行项目:
+5. 运行项目:
    1. 打开命令面板（Windows/Linux快捷键：`Ctrl+Shift+P` ，MacOS快捷键：`Cmd+Shift+P`）；
    2. 输入 `tasks: run task` 并运行此命令；
    3. 选择 `run-release` 任务并运行。
