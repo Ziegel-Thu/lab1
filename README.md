@@ -13,7 +13,7 @@
 
 ### Qt入门
 
-在 Windows 中，可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
+在 Windows 中，可以从[官网](https://www.qt.io/download-qt-installer-oss)下载qt，请参考[Qt安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)。
 
 如果安装过程中出现网络错误，可以尝试重新下载或更换上网方式。
 
@@ -140,7 +140,7 @@ git checkout main
 
 ### 编译运行
 
-1. 安装 Cursor / VSCode，安装推荐扩展，使用 IDE 将代码仓库克隆到本地，并打开项目。
+1. 参考[课前准备教程](https://meeting.tencent.com/crm/lR9GLWENe4)，安装 Cursor / VSCode，安装推荐扩展，使用 IDE 将代码仓库克隆到本地，并打开项目。
    - 推荐扩展：
      - MS-CEINTL.vscode-language-pack-zh-hans
      - ms-vscode.cpptools-extension-pack
@@ -172,11 +172,11 @@ git checkout main
 
 #### 注意事项
 
-- 步骤3只需要运行一次，也就是只需要创建一次build文件夹。
-- 步骤4-6可以直接通过运行步骤6来实现，也就是直接运行 `run-release` 任务。
+- 步骤2只需要运行一次，也就是只需要创建一次build文件夹。
+- 步骤3-5可以直接通过运行步骤5来实现，也就是直接运行 `run-release` 任务。
   - 因为配置了 `run-release` 依赖于 `make-release` ， `make-release` 依赖于 `qmake-release` 
   - 所以 `run-release` 会自动执行 `qmake-release` 和 `make-release` 任务
-- 如出现编译运行的问题且长时间未解决，可尝试将build文件夹删除后重新执行上述步骤3-6。
+- 如出现编译运行的问题且长时间未解决，可尝试将build文件夹删除后重新执行上述步骤2-5。
 
 ## lab1 内容
 
