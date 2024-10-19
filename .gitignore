@@ -1,4 +1,5 @@
 build/
+build-test/
 
 # Mac specific
 .DS_Store
