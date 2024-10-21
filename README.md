@@ -8,7 +8,7 @@
 
 - [Qt安装教程](https://meeting.tencent.com/crm/NXBPkX8K4c)
 - [课前准备教程](https://meeting.tencent.com/crm/lR9GLWENe4)
-- [（重要）QT和lab1框架的介绍，以及一些提醒](https://meeting.tencent.com/crm/NA6xk7Rlc7)
+- [**重要** QT介绍，lab1框架介绍，一些提醒](https://meeting.tencent.com/crm/NA6xk7Rlc7)
 
 ### 前提条件
 
