@@ -50,6 +50,14 @@ Git的教程比较多，我们在这里推荐几个：
 
 初始仓库里除了main分支，还有一个被保护的down分支。如果之后实验的基础代码有更新，我们会把新的版本push到down分支上。
 
+需要更新实验基础代码时，可以直接在网页左侧菜单“代码”-“分支”处创建从down到开发分支(main)的合并请求，也可以参考git相关教程，在本地合并基础代码：
+
+```bash
+git checkout main
+git fetch origin down
+git merge origin/down
+```
+
 <details>
 <summary>
 本项目可能会用到的`git`操作速查表
