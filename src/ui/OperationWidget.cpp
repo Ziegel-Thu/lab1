@@ -12,5 +12,5 @@ OperationWidget::OperationWidget(QWidget *parent) : QWidget(parent) {
     layout->addWidget(undoButton_.get());
 
     connect(startButton_.get(), &QPushButton::clicked, this, &OperationWidget::startGameRequested);
-    // TODO: 连接悔棋按钮的点击信号和悔棋请求信号
+    connect(undoButton_.get(), &QPushButton::clicked, this, &OperationWidget::undoRequested);
 }
