@@ -15,6 +15,7 @@ public:
     bool isValidPosition(int row, int col) const;
     bool isGameOver(int row, int col) const;
     bool undoLastMove();
+    bool recordMoveHistory(int row,int col);
 
     int getRows() const { return rows_; }
     int getCols() const { return cols_; }
@@ -24,4 +25,5 @@ protected:
     int rows_;
     int cols_;
     std::vector<std::vector<std::shared_ptr<Piece>>> grid_;
+    std::stack<std::pair<int,int>>moveHistory;
 };

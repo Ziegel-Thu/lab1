@@ -40,7 +40,7 @@ void MainWindow::setupUi() {
 
 void MainWindow::connectSignals() {
     connect(operationWidget_.get(), &OperationWidget::startGameRequested, this, &MainWindow::onGameStart);
-    // TODO: 连接悔棋请求信号和悔棋槽函数
+    connect(operationWidget_.get(), &OperationWidget::undoRequested, this, &MainWindow::onUndoRequested);
     connect(boardWidget_.get(), &BoardWidget::moveMade, this, &MainWindow::onMoveMade);
 }
 

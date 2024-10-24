@@ -21,6 +21,7 @@ public:
     const std::shared_ptr<Player> getCurrentPlayer() const;
     bool isGameOver() const;
 
+
 protected:
     std::shared_ptr<Board> board_;
     std::vector<std::shared_ptr<Player>> players_;
