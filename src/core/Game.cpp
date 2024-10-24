@@ -26,7 +26,7 @@ bool Game::makeMove(int row, int col) {
 
     auto piece = std::make_shared<Piece>(currentPlayer_->getColor());
     board_->setPiece(row, col, piece);
-
+    board_->recordMoveHistory(row,col);
     if (board_->isGameOver(row, col)) {
         end();
         return true;
